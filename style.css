@@ -24,6 +24,10 @@ p {
   color: orange;
 }
 
+ul {
+  color: orange;
+}
+
 nav {
   display: flex;  /* Enables Flexbox */
   background-color: #333; /* Dark background for contrast */
