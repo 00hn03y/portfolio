@@ -3,5 +3,11 @@ body {
        and use the OS’s UI font as the website font
      */
     font: 100%/1.5 system-ui;
+    
+    /* stop the content from getting so wide */
+    max-width: 40em;
+
+    /* center the content */
+    margin-inline: 0 auto;
    }
    
