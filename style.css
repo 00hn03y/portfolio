@@ -54,7 +54,7 @@ nav a:hover {
   background-color: #555; /* Darker gray on hover */
 }
 
-nav a currentpage {
+nav a .currentpage {
   margin-bottom: auto;
   border-bottom-width: 3px;
   border-bottom-style: solid;
