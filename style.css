@@ -18,20 +18,23 @@ body {
    }
 
 h1, h2, h3, h4, h5, h6 {
-  color: white;
+  color: whitesmoke;
 }
 
 p {
-  color: orange;
+  color: whitesmoke;
 }
 
 section article ul {
-  color: orange;
+  color: whitesmoke;
+}
+
+label {
+  color: whitesmoke;
 }
 
 nav {
   display: flex;  /* Enables Flexbox */
-  background-color: #333; /* Dark background for contrast */
   padding: 10px;
 }
 
@@ -39,7 +42,7 @@ nav {
 nav a {
   flex: 1; /* Makes each link take up equal space */
   text-align: center; /* Centers the text */
-  color: inherit; /* Text color */
+  color: orange; /* Text color */
   text-decoration: none; /* Removes underline */
   padding: 0.5em; /* Adds spacing */
   font-weight: bold;
@@ -47,16 +50,42 @@ nav a {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: oklch(lightness chroma hue);
+
+  &.currentpage {
+    margin-bottom: auto;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: grey;
+    background-color: rgb(35, 35, 35);
+  }
 }
 
 /* Change color on hover */
 nav a:hover {
-  background-color: #555; /* Darker gray on hover */
+  border-bottom: 5px solid var(--color-accent)
 }
 
 nav a .currentpage {
   margin-bottom: auto;
-  border-bottom-width: 3px;
+  border-bottom-width: 5px;
   border-bottom-style: solid;
-  border-bottom-color: orange;
+  border-bottom-color: grey;
+}
+
+/* Define the accent color */
+:root {
+  --color-accent: orange;  /* Adjust the values as needed */
+}
+
+/* Apply the accent color */
+html {
+  accent-color: var(--color-accent);  /* Inherits for form elements like checkboxes */
+}
+
+input, textarea, button {
+  font: inherit;  /* Inherits font settings from the page */
+}
+
+form {
+  display: grid;  /* Enables Grid Layout */
 }
