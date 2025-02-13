@@ -13,4 +13,8 @@ body {
     /* add some padding */
     padding: 1em;
    }
+
+p {
+  color: orange;
+}
    
