@@ -88,4 +88,18 @@ input, textarea, button {
 
 form {
   display: grid;  /* Enables Grid Layout */
+  grid-template-columns: auto 1fr;  /* Creates a two-column layout */
+  grid-template-columns: subgrid;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*apply a responsive grid*/
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
 }
