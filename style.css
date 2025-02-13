@@ -8,6 +8,9 @@ body {
     max-width: 40em;
 
     /* center the content */
-    margin-inline: 0 auto;
+    margin: 0 auto;
+
+    /* add some padding */
+    padding: 1em;
    }
    
