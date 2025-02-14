@@ -129,3 +129,35 @@ img {
 .projects article h2 {
   margin: 0;
 }
+
+.resume {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem
+}
+
+/* Article Styling */
+article {
+  padding: 1em;
+  border-radius: 5px;
+  background: #222;
+}
+
+article ul {
+  padding-left: 1.5em;
+}
+
+article ul li {
+  margin-bottom: 0.5em;
+}
+
+/* Download Resume Link */
+p a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
