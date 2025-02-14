@@ -4,7 +4,7 @@ body {
   /* Set line height to 1.5 times the font size
        and use the OS’s UI font as the website font
      */
-    font: 100%/1.5 helvetica;
+    font: 100%/1.5 "Trebuchet MS", sans-serif;
     
     /* stop the content from getting so wide */
     max-width: 80vw;
@@ -19,7 +19,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: whitesmoke;
+  line-height: 1.1;
+  text-wrap: balance;
 }
+
+h1 {
+  font-size: 400%; /* 4 times the base font size */
+  font-weight: bold; /* Ensures prominence */
+  margin-bottom: 0.5em; /* Adds spacing below */
+}
+
+h2 {
+  font-size: 200%; /* Adjusted for clear hierarchy */
+  font-weight: bold;
+  margin-top: 1em; /* Adds spacing above */
+}
+
 
 p {
   color: whitesmoke;
@@ -101,5 +116,16 @@ img {
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em;
+  gap: 1rem;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0.5rem;
+}
+
+.projects article h2 {
+  margin: 0;
 }
