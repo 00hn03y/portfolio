@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Yeonhoo Cho</strong> — <em>choyh@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Speculation</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>Who is driving up the home prices in Boston? How?</li>
+				<ul>
+					<li>My intuition about Boston is that corporate landlords are increasingly acquiring residential properties, 
+						shifting ownership away from individual homeowners and profiting off of rent increases. 
+						Having read the ProPublica article, which highlights the role of private equity firms in rent increase, 
+						I became curious about the role of real estate investors in driving the speculative housing market. Given Boston’s rising home prices, 
+						I want to explore the characteristics of property buyers. Are they banks, firms, LLCs, government entities, etc?</li>
+				</ul>				
+				<li>What are the characteristics of the neighborhoods with the most frequent/volatile flipping practices?</li>
+				<ul><li>Prior studies have found that house flipping is often concentrated in neighborhoods with lower initial home values and a high proportion of renters (Immergluck, 2018). 
+					I want to investigate whether these trends hold true in Boston and what demographic or economic factors might be influencing them.</li>
+				</ul>
+				<li>Is Black population vulnerable to speculative residential investment?</li>
+				<ul><li>Historically, redlined Black neighborhoods have been targeted by predatory real estate practices, leading to cycles of displacement. Given that Boston remains one of the most segregated cities in the US, I want to explore whether Black communities are disproportionately affected by speculative investment. 
+				</li></ul>
+			</ol>
+			Immergluck, D. (2018). "Old wine in private equity bottles? The resurgence of contract-for-deed home sales in US urban neighborhoods." International Journal of Urban and Regional Research, 42(4), 651-665.
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+			<h3>Phase 1: Data Overview</h3>
+
+			<figure>
+				<img src="images/1.png" alt="" />
+				<figcaption>
+					<h4>Corporate Ownership Trends by Neighborhood</h4>
+					To explore how corporate ownership of residential properties has evolved in Boston, I analyzed corporate ownership rates ("corp_own_rate") across neighborhoods from 2004 to 2024. My line chart reveals a continuous upward trend in corporate ownership across all neighborhoods, with particularly steep increases in East Boston (3% → 30%) and South Boston Waterfront (6% → 38%) over two decades. In contrast, neighborhoods like West Roxbury (1% → 13%), Roslindale (2% → 14%), and Hyde Park (2% → 12%) show lower corporate ownership rates and slower growth.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/2.png" alt="" />
+				<figcaption>
+					<h4>Corporate Ownership Rates Over Time</h4>
+					A complementary heatmap visualization confirms this trend, with neighborhoods transitioning from lighter to darker shades over time, indicating rising corporate ownership. Notably, some anomalies stand out—South Boston Waterfront sees a sharp 10% increase from 2009 to 2010, followed by a 9% drop by 2014. Additionally, Chinatown initially shows a decline in corporate ownership until 2010, after which it gradually increases. These fluctuations could be linked to local policy changes, market conditions, or major real estate investments during specific periods.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/3.png" alt="" />
+				<figcaption>
+					<h4>Corporate Ownership and Vacancy Rates in Boston</h4>
+					To examine the relationship between corporate ownership and housing availability, I created a scatterplot comparing corporate ownership rates to vacancy rates across Boston neighborhoods. The results reveal a clear positive correlation—neighborhoods with higher corporate ownership tend to have higher vacancy rates. This pattern suggests that corporate investors may be holding onto properties rather than renting or selling them immediately, possibly in anticipation of future profits.
+					This trend supports the idea that corporate ownership contributes to housing scarcity in Boston, reducing the supply of available homes. However, a limitation of this analysis is that vacancy rate data is only available for 2020, preventing a year-over-year comparison of how this relationship has evolved over time. Further investigation into long-term vacancy trends could provide deeper insights into the impact of corporate investment on housing availability.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/4.png" alt="" />
+				<figcaption>
+					<h4>Flipping Trends in Boston Neighborhoods (2000–2023)</h4>
+					To understand house-flipping activity in Boston, I analyzed the flip rate (flipped properties / total properties sold) across neighborhoods. The data reveals that only seven neighborhoods exhibited flip rates above 0%, suggesting that the majority of Boston neighborhoods do not experience frequent short-term property resales (defined in this dataset as sales occurring within two years).
+					<br>Among the seven neighborhoods with measurable flipping activity, flip rates range between 3-4%, indicating that 1 in 25-33 properties are being flipped. This suggests that flipping is not a widespread phenomenon across the city under the dataset’s definition, but may be concentrated in specific areas. Further investigation into the characteristics of these high-flipping neighborhoods—such as price trends, corporate ownership levels, and demographic shifts—could help uncover the underlying factors driving flipping activity in Boston.
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/5.png" alt="" />
+				<figcaption>
+					<h4>Trends in Home Prices by Buyer Type Over Time</h4>
+					This line chart visualizes the average home sale prices in Boston from 2000 to 2023, categorized by buyer type (e.g., banks, government entities, LLCs). The data reveals that corporate buyers, particularly LLCs, consistently pay higher prices compared to individual buyers, suggesting their influence on driving up home values. Additionally, applying a 3-year moving average smooths fluctuations and highlights long-term price trends. The steady increase in corporate purchases aligns with rising home prices, indicating that institutional investors may be a key factor in Boston's housing market dynamics.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/6.png" alt="" />
+				<figcaption>
+					<h4>Characteristics of High-Flipping Neighborhoods</h4>
+					These bar charts highlight key characteristics of six Boston neighborhoods with the highest flip rates. The metrics include average corporate ownership rate (2004–2024), average vacancy rate (2004–2024), percentage of Black population (2020), and median home price. Due to data limitations in the neighborhood zip code join, Back Bay was excluded, leaving six neighborhoods for analysis.
+					<br>The results show a positive correlation between corporate ownership, vacancy rates, and home prices, supporting the idea that investor activity is linked to housing instability. Notably, Longwood and South End have relatively higher Black population percentages, raising questions about potential disproportionate impacts of speculative investment. Further analysis into buyer-seller dynamics and investor types in these areas could provide deeper insights into how real estate speculation affects residents' experiences.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="images/7.png" alt="" />
+				<figcaption>
+					<h4>Black Population vs. Corporate Ownership</h4>
+					This square chart visualizes the percentage of Black population (2020) using a color gradient and corporate ownership rate (2024) represented by square size. The visualization highlights that while flipping activity is not widespread, Roxbury and Dorchester—two predominantly Black neighborhoods—show high corporate ownership rates, signaling potential housing instability.
+					<br>This pattern suggests that these neighborhoods may be more vulnerable to speculative real estate investment, where corporate entities acquire properties, potentially leading to displacement or increased flipping in the future. Monitoring trends in these areas could help anticipate housing market shifts and inform policy responses to protect long-term residents.
+				</figcaption>
+			</figure>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p><li>Corporate ownership is rising across all Boston neighborhoods, with certain areas experiencing sharp increases. East Boston and South Boston Waterfront have seen the steepest increases in corporate ownership, suggesting a shift toward investor-driven housing markets. Corporate ownership and vacancy rates are also positively correlated, indicating speculative property holding. Figure 3 suggests that corporate investors may be acquiring properties and leaving them vacant, reducing available housing supply and driving up prices.
+				</li><li>Furthermore, corporate buyers, especially LLCs, consistently pay higher prices than individual buyers, contributing to rising home values. The home price trends by buyer type visualization (Figure 5) supports concerns that institutional investors are outbidding local homebuyers, making homeownership less accessible.
+				</li><li>House flipping is not widespread, but certain neighborhoods have notable activity. The flipping trends chart reveals that only seven neighborhoods have measurable flipping activity, with flip rates between 3-4%. This suggests flipping is localized rather than citywide, but its effects on price dynamics should be explored further. Neighborhoods with high flip rates also tend to have high corporate ownership and vacancy rates.
+				</li><li>>Black-majority neighborhoods, particularly Roxbury and Dorchester, have high corporate ownership rates, raising concerns about displacement. The Black Population vs. Corporate Ownership chart (Figure 7) shows that while flipping isn’t widespread, corporate acquisition of housing in Black neighborhoods could lead to future displacement pressures.
+				</li></p>
+		</section>
+	</main>
+</body>
+</html>
