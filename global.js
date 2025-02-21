@@ -23,9 +23,9 @@ function $$ (selector, context = document) {
 document.addEventListener("DOMContentLoaded", function() {
 let pages = [
 	{url: "", title: "Home"},
-    {url: "projects/", title: "Projects"},
-    {url: "Resume/", title: "Resume"},
-    {url: "contact/", title: "Contact"},
+    {url: "projects", title: "Projects"},
+    {url: "Resume", title: "Resume"},
+    {url: "contact", title: "Contact"},
     {url: "https://github.com/00hn03y/", title: "GitHub"},
 	// TODO: add the rest of your pages here
 ];
