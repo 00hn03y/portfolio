@@ -23,7 +23,7 @@ function $$ (selector, context = document) {
 document.addEventListener("DOMContentLoaded", function() {
 let pages = [
 	{url: "", title: "Home"},
-	{url: "projects/index.html", title: "Projects"},
+    {url: "projects/", title: "Projects"},
     {url: "Resume/", title: "Resume"},
     {url: "contact/", title: "Contact"},
     {url: "https://github.com/00hn03y/", title: "GitHub"},
