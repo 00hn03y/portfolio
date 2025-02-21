@@ -1,9 +1,10 @@
+html {
+  color-scheme:  dark; 
+}
+
 body {
-  background-color: #121212; 
-  
-  /* Set line height to 1.5 times the font size
-       and use the OS’s UI font as the website font
-     */
+    background-color: Canvas; /* Automatically adapts */
+    color: CanvasText;
     font: 100%/1.5 "Trebuchet MS", sans-serif;
     
     /* stop the content from getting so wide */
@@ -17,8 +18,21 @@ body {
 
    }
 
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  
+  font: inherit;
+}
+
+.color-scheme select {
+  font: inherit;
+  display: inline-flex;
+  gap: 4px;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  color: whitesmoke;
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -35,22 +49,10 @@ h2 {
   margin-top: 1em; /* Adds spacing above */
 }
 
-
-p {
-  color: whitesmoke;
-}
-
-section article ul {
-  color: whitesmoke;
-}
-
-label {
-  color: whitesmoke;
-}
-
 nav {
   display: flex;  /* Enables Flexbox */
   padding: 10px;
+  --border-color: oklch(50% 10% 200 / 40%)
 }
 
 /* Style navigation links */
@@ -62,29 +64,25 @@ nav a {
   padding: 0.5em; /* Adds spacing */
   font-weight: bold;
   margin-bottom: auto;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(lightness chroma hue);
+  border-bottom: 1px solid var(--border-color);
 
   &.currentpage {
     margin-bottom: auto;
     border-bottom-width: 5px;
     border-bottom-style: solid;
-    border-bottom-color: grey;
-    background-color: rgb(35, 35, 35);
+    border-bottom-color: rgba(216, 216, 216, 0.415);
+    background-color: rgba(216, 216, 216, 0.174);
   }
 }
 
 /* Change color on hover */
 nav a:hover {
-  border-bottom: 5px solid var(--color-accent)
+  border-bottom: 5px solid var(--color-accent);
+  background-color: rgba(216, 216, 216, 0.244);
 }
 
-nav a .currentpage {
-  margin-bottom: auto;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-  border-bottom-color: grey;
+nav a.currentpage {
+  border-bottom: 5px solid grey;
 }
 
 /* Define the accent color */
@@ -140,7 +138,7 @@ img {
 article {
   padding: 1em;
   border-radius: 5px;
-  background: #222;
+  background: #9b9b9b76;
 }
 
 article ul {
