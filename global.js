@@ -36,25 +36,6 @@ document.body.prepend(nav);
 // TODO: Inside index.html (our home page), add a class="home" attribute to the <html lang="en"> element!
 const ARE_WE_HOME = document.documentElement.classList.contains("home");
 
-// for (let p of pages) {
-// 	let url = p.url;
-// 	let title = p.title;
-
-// 	// Create link and add it to nav 
-//     if (!ARE_WE_HOME && !url.startsWith("http")) {
-//         url = "../" + url;
-//     }
-
-// 	let a = document.createElement("a");
-// a.href = url;
-// a.textContent = title;
-// nav.append(a);
-// }
-
-
-// step 3.2
-// TODO: Comment out the `for (let p of pages) {...}` loop you made in step 3.1 and uncomment the for loop below! I have helped you restructure the loop a bit in a way that may be confusing from the lab instructions
-
 for (let p of pages) {
 	let url = p.url;
 	let title = p.title;
