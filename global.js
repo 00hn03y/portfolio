@@ -46,7 +46,7 @@ for (let p of pages) {
     }
 
     let a = document.createElement("a");
-    a.href = new URL(url, location.origin).href;
+    a.href = url;
     a.textContent = title;
     
     if (a.pathname === location.pathname) {
